@@ -14,9 +14,7 @@ import {ContactsComponent} from "./contacts/contacts.component";
     <div>
       Hello World
     </div>
-    <section class="content">
-      <app-contacts></app-contacts>
-    </section>
+    <app-contacts></app-contacts>
   </main>
   `,
   styleUrls: ['./app.component.css'],
