@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {HttpParams} from "@angular/common/http";
 import { Observable, throwError} from "rxjs";
 import { catchError, retry} from "rxjs/operators";
 import {comment} from "postcss";
@@ -12,5 +13,8 @@ export class ContactsService {
 
   getContacts() {
     return this.http.get(`${this.apiUrl}/all`);
+  }
+  addContact(contact: object){
+    const params = new HttpParams({fromString: 'firstName='});
   }
 }

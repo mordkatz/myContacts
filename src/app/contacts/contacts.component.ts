@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ContactsService} from "../app.contacts.services";
 import {HttpClientModule} from "@angular/common/http";
+import {ContactInterface} from "../contact-interface";
 
 @Component({
   selector: 'app-contacts',
@@ -13,7 +14,7 @@ import {HttpClientModule} from "@angular/common/http";
   templateUrl: './contacts.component.html',
 })
 export class ContactsComponent implements OnInit {
-  title: "Contacts" | undefined;
+  title = 'Home page'
   data:any;
   constructor(private contactService: ContactsService){}
   ngOnInit() {
